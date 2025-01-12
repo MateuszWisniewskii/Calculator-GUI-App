@@ -4,10 +4,25 @@
  */
 package pl.polsl.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author mdw18
  */
 public class HistoryModel {
-    
+       private List<CalculationData> history;
+        
+        public HistoryModel(){
+            history = new ArrayList<>();
+        }
+        
+        public void add(CalculationData data){
+            history.add(data);
+        }
+        
+        public List<CalculationData> getHistory(){
+            return history;
+        }
 }
